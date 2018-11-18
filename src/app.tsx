@@ -7,6 +7,7 @@ import { IStoreState } from "./global/types";
 import { setGlobalSyncId } from "./global/actions";
 import HomePage from "./pages/Home";
 import TestPage from "./pages/Test";
+import PullToRefresh from "./pages/PullRefresh";
 import styles from "./style.css";
 
 interface IAppComponentProps {
@@ -33,7 +34,7 @@ class AppComponent extends React.Component<IAppComponentProps, {}> {
           </div>
 
           {/* register routes */}
-          <Route exact path="/" component={HomePage} />
+          <Route exact path="/" component={PullToRefresh} />
           <Route path="/test" component={TestPage} />
 
           <button onClick={this.handleGlobal}>
